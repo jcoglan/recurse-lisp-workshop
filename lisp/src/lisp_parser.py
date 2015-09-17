@@ -19,12 +19,6 @@ class TreeNode1(TreeNode):
         self.expression = elements[1]
 
 
-class TreeNode2(TreeNode):
-    def __init__(self, text, offset, elements):
-        super(TreeNode2, self).__init__(text, offset, elements)
-        self.expression = elements[0]
-
-
 class ParseError(SyntaxError):
     pass
 
