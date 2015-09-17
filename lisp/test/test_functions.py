@@ -10,7 +10,7 @@ def test_lambda_creates_a_function():
 
 def test_calling_a_nullary_function():
     source_code = """
-        (define nine (lambda () + 4 5))
+        (define nine (lambda () (+ 4 5)))
 
         (nine)
     """
