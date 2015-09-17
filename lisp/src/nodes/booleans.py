@@ -8,5 +8,5 @@ class Bool(object):
         else:
             return '#f'
 
-    def evaluate(self, env):
+    def evaluate(self, scope):
         pass

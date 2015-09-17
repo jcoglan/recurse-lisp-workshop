@@ -5,5 +5,5 @@ class Symbol(object):
     def __repr__(self):
         return self.name
 
-    def evaluate(self, env):
+    def evaluate(self, scope):
         pass

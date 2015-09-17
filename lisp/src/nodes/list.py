@@ -18,7 +18,7 @@ class List(object):
             node = node.tail
         return '(' + ' '.join([x.__repr__() for x in list]) + ')'
 
-    def evaluate(self, env):
+    def evaluate(self, scope):
         pass
 
 

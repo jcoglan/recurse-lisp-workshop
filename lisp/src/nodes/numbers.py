@@ -5,7 +5,7 @@ class Int(object):
     def __repr__(self):
         return str(self.value)
 
-    def evaluate(self, env):
+    def evaluate(self, scope):
         pass
 
 

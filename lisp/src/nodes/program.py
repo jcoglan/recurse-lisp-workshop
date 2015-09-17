@@ -5,5 +5,6 @@ class Program(object):
     def __repr__(self):
         return '\n'.join([x.__repr__() for x in self.expressions])
 
-    def evaluate(self, env):
-        pass
+    def evaluate(self, scope):
+        results = [expr.evaluate(scope) for expr in self.expressions]
+        return results.pop()
