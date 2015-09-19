@@ -6,7 +6,7 @@ class Int(object):
         return str(self.value)
 
     def evaluate(self, scope):
-        pass
+        return self.value
 
 
 class Float(Int):

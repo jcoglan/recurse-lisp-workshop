@@ -16,10 +16,22 @@ class List(object):
         while node != NULL:
             list.append(node.head)
             node = node.tail
-        return '(' + ' '.join([x.__repr__() for x in list]) + ')'
+        return '(' + ' '.join([repr(x) for x in list]) + ')'
 
     def evaluate(self, scope):
-        pass
+        print "list head: " + repr(self.head)
+        print "list tail: " + repr(self.tail)
+
+        if self.head.name == 'define':
+            scope.set(self.tail.head.name, self.tail.tail.head.evaluate(scope))
+
+        elif self.head.name == 'if':
+            pass  # todo
+
+        else:
+            fun = scope.get(self.head.name)
+            return [fun.evaluate(*self.tail)]
+
 
 
 NULL = List()

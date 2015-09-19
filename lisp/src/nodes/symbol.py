@@ -6,4 +6,4 @@ class Symbol(object):
         return self.name
 
     def evaluate(self, scope):
-        pass
+        return scope.get(self.name)

@@ -9,4 +9,8 @@ class Bool(object):
             return '#f'
 
     def evaluate(self, scope):
-        pass
+        if self.value == True:
+        	return True
+        elif self.value == False:
+        	return False
+        return
